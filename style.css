@@ -1,3 +1,101 @@
-h1 {
-  color: red;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
+
+body {
+  margin: 100px;
+  padding: 20px;
+  display: block;
+}
+
+.container {
+  display: flex;
+}
+
+.weather {
+  font-family: "Open Sans Condensed", sans-serif;
+  background: linear-gradient(to bottom right, #f5c7f7, #a393eb, #5e63b6);
+  width: 1000px;
+  display: block;
+  margin: 0 auto;
+  font-size: 21px;
+  line-height: 1.5;
+  color: #ffd124;
+  border-radius: 15px;
+}
+
+#celsius-link,
+#fahrenheit-link {
+  color: #ffd124;
+  text-decoration: none;
+  font-size: 30px;
+}
+#searching-bar {
+  position: relative;
+  left: 600px;
+  top: 200px;
+  border: none;
+}
+
+input,
+button {
+  color: #ffd124;
+  padding: 10px;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+}
+
+.today {
+  padding: 40px 60px;
+  display: flex;
+}
+
+.today .weather-icon {
+  font-size: 162px;
+}
+
+.today .weather-detail .current-temperature {
+  font-size: 92px;
+}
+
+.today .weather-detail {
+  padding-left: 75px;
+}
+
+.week {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.day {
+  flex-grow: 1;
+  padding: 21px 9px;
+  text-align: center;
+}
+
+.day:last-child {
+  border-right: 0;
+}
+
+.day .weather-icon {
+  margin: 5px 0;
+  color: #01373d;
+}
+
+.day .temperature {
+  font-size: 16px;
+}
+
+#current-btn {
+  display: block;
+  margin: 0 auto;
+  background-color: #ffd124;
+  color: #5e63b6;
+  border-radius: 5px;
+  position: relative;
+  left: 60px;
+  top: 200px;
 }
