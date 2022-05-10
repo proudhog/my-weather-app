@@ -29,9 +29,9 @@ body {
   font-size: 30px;
 }
 #searching-bar {
-  position: relative;
-  left: 600px;
-  top: 200px;
+  position: absolute;
+  left: 1102px;
+  top: 214px;
   border: none;
 }
 
