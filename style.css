@@ -99,3 +99,11 @@ button {
   left: 60px;
   top: 200px;
 }
+
+small {
+  padding-left: 335px;
+  padding-right: 335px;
+  padding-bottom: 30px;
+  padding-top: 50px;
+  color: #ffd124;
+}
