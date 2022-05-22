@@ -107,3 +107,7 @@ small {
   padding-top: 50px;
   color: #ffd124;
 }
+
+#description {
+  text-transform: capitalize;
+}

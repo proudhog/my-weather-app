@@ -26,7 +26,6 @@ currentTime.innerHTML = `${day}, ${hours}:${minutes}`;
 // Enter real life data
 
 function showTemperature(response) {
-  console.log(response.data);
   document.querySelector(".city").innerHTML = response.data.name;
   let temp = document.querySelector(".number");
   temp.innerHTML = Math.round(response.data.main.temp);
@@ -34,6 +33,15 @@ function showTemperature(response) {
   wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `Humidity: ${Math.round(response.data.main.humidity)}%`;
+  let description = document.querySelector("#description");
+  description.innerHTML = response.data.weather[0].description;
+  let iconElement = document.querySelector("#w-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+  celsius = response.data.main.temp;
 }
 
 function search(city) {
@@ -51,6 +59,28 @@ function showCity(event) {
 let searchForm = document.querySelector("#searching-bar");
 searchForm.addEventListener("submit", showCity);
 search("Berlin");
+
+//Celsius and Fahrenheit units conversion
+
+function showFahrenheit(event) {
+  event.preventDefault();
+
+  let fahrenheit = Math.round((celsius * 9) / 5 + 32);
+  let tempInput = document.querySelector(".number");
+  tempInput.innerHTML = `${fahrenheit}`;
+}
+let celsius = null;
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+
+function showCelsius(event) {
+  event.preventDefault();
+  let tempInput = document.querySelector(".number");
+  tempInput.innerHTML = Math.round(celsius);
+}
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsius);
 
 //Current Location Button
 function searchLocation(position) {
