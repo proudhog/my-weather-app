@@ -111,3 +111,7 @@ small {
 #description {
   text-transform: capitalize;
 }
+
+.temp-min {
+  opacity: 0.8;
+}
