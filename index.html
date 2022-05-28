@@ -24,56 +24,73 @@
   <body>
     <div class="container">
       <div class="weather">
-        <button type="button" class="btn btn-warning" id="current-btn">
-          Current
-        </button>
-        <form id="searching-bar" action="">
-          <input
-            type="text"
-            id="city-input"
-            placeholder="Enter city here"
-            name="search"
-            autofocus="on"
-            autocomplete="off"
-          />
-          <button type="submit" id="button-submit" value="Sign up">
-            <i class="fa fa-search"></i>
-          </button>
-        </form>
+        <div class="row">
+          <div class="col-12">
+            <button type="button" class="btn btn-warning" id="current-btn">
+              Current
+            </button>
+          </div>
+        </div>
+        
+          <form id="searching-bar" action="">
+            <div class="col-4">
+            <input
+              type="text"
+              id="city-input"
+              placeholder="Enter city here"
+              name="search"
+              autofocus="on"
+              autocomplete="off"
+            />
+            <button type="submit" id="button-submit" value="Sign up">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
         <div class="today">
-          <div class="weather-icon">
-            <img src="" alt="" id="w-icon" />
+          <div class="col-2">
+            <div class="weather-icon">
+              <img src="" alt="" id="w-icon" />
+            </div>
           </div>
           <div class="weather-detail">
             <div class="current-temperature">
-              <span class="number"></span>
-              <span class="units">
-                <a href="#" id="celsius-link">°C</a>
-                <a href="#" id="fahrenheit-link">| °F</a>
-              </span>
+              <div class="col-12">
+                <span class="number"></span>
+                <span class="units">
+                  <a href="#" id="celsius-link">°C</a>
+                  <a href="#" id="fahrenheit-link">| °F</a>
+                </span>
+              </div>
             </div>
-            <div id="current-time"></div>
-            <div class="city"></div>
-            <div class="temperature">
-              <span id="wind-speed">Wind: km/h</span>
-            </div>
-            <div class="rainy-percent">
-              <span id="humidity">Humidity: %</span>
-            </div>
-            <div class="rainy-percent">
-              <span id="description">Description</span>
+            <div class="col-12">
+              <div id="current-time"></div>
+              <div class="city"></div>
+              <div class="temperature">
+                <span id="wind-speed">Wind: km/h</span>
+              </div>
+              <div class="rainy-percent">
+                <span id="humidity">Humidity: %</span>
+              </div>
+              <div class="rainy-percent">
+                <span id="description">Description</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="day">
           <div class="weather-forecast" id="forecast"></div>
         </div>
-        <small
-          ><a href="https://github.com/proudhog/my-weather-app" target="_blank"
-            >Open-source code</a
-          >
-          by Proud🦔Hog
-        </small>
+        <div class="col-12">
+          <small
+            ><a
+              href="https://github.com/proudhog/my-weather-app"
+              target="_blank"
+              >Open-source code</a
+            >
+            by Proud🦔Hog
+          </small>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>

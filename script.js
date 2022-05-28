@@ -49,15 +49,15 @@ function displayForecast(response) {
             <div class="weather-icon">
               <img src="http://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
-              }@2x.png" alt="" id="mon-icon" />
+              }@2x.png" alt=""/>
             </div>
             <div class="temperature">
               <span class="temp-max">${Math.round(forecastDay.temp.max)}° </span
               ><span class="temp-min">${Math.round(
                 forecastDay.temp.min
               )}°</span>
-            </div>  </div>
-          `;
+            </div>  
+          </div>`;
     }
   });
 

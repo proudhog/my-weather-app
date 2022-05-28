@@ -12,7 +12,13 @@ body {
 
 .weather {
   font-family: "Open Sans Condensed", sans-serif;
-  background: linear-gradient(to bottom right, #f5c7f7, #a393eb, #5e63b6);
+  background: linear-gradient(
+    to bottom right,
+    #a2d2ff,
+    #30aadd,
+    #035397,
+    #001e6c
+  );
   width: 1000px;
   display: block;
   margin: 0 auto;
@@ -29,9 +35,9 @@ body {
   font-size: 30px;
 }
 #searching-bar {
-  position: absolute;
-  left: 1102px;
-  top: 214px;
+  position: relative;
+  left: 655px;
+  top: 155px;
   border: none;
 }
 
